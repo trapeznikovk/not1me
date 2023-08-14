@@ -120,7 +120,7 @@ class CAT:
         if self.rigctrlsocket:
             try:
                 self.online = True
-                self.rigctrlsocket.send(b"\nf\n")
+                self.rigctrlsocket.send(b"f\n")
                 return self.rigctrlsocket.recv(1024).decode().strip()
             except socket.error as exception:
                 self.online = False

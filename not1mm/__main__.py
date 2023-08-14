@@ -31,6 +31,8 @@ from PyQt5 import QtCore, QtGui, QtWidgets, uic
 from PyQt5.QtCore import QDir, QPoint, QRect, QSize, Qt
 from PyQt5.QtGui import QFontDatabase
 from PyQt5.QtWidgets import QFileDialog
+from qt_material import apply_stylesheet
+from qt_material import list_themes
 
 from not1mm.lib.about import About
 from not1mm.lib.cat_interface import CAT
@@ -2367,10 +2369,17 @@ else:
     logger.warning("debugging off")
 
 app = QtWidgets.QApplication(sys.argv)
-app.setStyle("Adwaita-Dark")
+# app.setStyle("Adwaita-Dark")
+
 font_path = WORKING_PATH + "/data"
 families = load_fonts_from_dir(os.fspath(font_path))
 logger.info(families)
+
+extra = {
+    'font_family': 'JetBrains Mono',
+}
+# apply_stylesheet(app, theme='light_blue.xml',invert_secondary=True, extra=extra)
+
 window = MainWindow()
 height = window.pref.get("window_height", 300)
 width = window.pref.get("window_width", 700)

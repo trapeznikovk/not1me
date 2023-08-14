@@ -20,6 +20,9 @@ from PyQt5 import QtCore, QtGui, QtWidgets, uic, Qt
 from PyQt5.QtCore import QDir, QItemSelectionModel
 from PyQt5 import QtNetwork
 from PyQt5.QtGui import QFontDatabase
+from qt_material import apply_stylesheet
+from qt_material import list_themes
+
 
 from not1mm.lib.database import DataBase
 from not1mm.lib.multicast import Multicast
@@ -801,7 +804,8 @@ else:
     logger.warning("debugging off")
 
 app = QtWidgets.QApplication(sys.argv)
-app.setStyle("Adwaita-Dark")
+apply_stylesheet(app, theme='dark_blue.xml')
+# app.setStyle("Adwaita-Dark")
 font_path = WORKING_PATH + "/data"
 _families = load_fonts_from_dir(os.fspath(font_path))
 window = MainWindow()
