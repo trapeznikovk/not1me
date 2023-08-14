@@ -77,6 +77,11 @@ class CAT:
             self.rigctrlsocket.connect((self.host, self.port))
             logger.debug("Connected to rigctrld")
             self.online = True
+        except BaseException as exception:
+            self.rigctrlsocket = None
+            self.online = False
+            logger.debug("%s", f"{exception}")
+
         except ConnectionRefusedError as exception:
             self.rigctrlsocket = None
             self.online = False
