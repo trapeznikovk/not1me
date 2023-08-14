@@ -2376,9 +2376,9 @@ families = load_fonts_from_dir(os.fspath(font_path))
 logger.info(families)
 
 extra = {
-    'font_family': 'JetBrains Mono',
+     'font_family': 'JetBrains Mono',
 }
-# apply_stylesheet(app, theme='light_blue.xml',invert_secondary=True, extra=extra)
+apply_stylesheet(app, theme='dark_blue.xml',invert_secondary=True, extra=extra)
 
 window = MainWindow()
 height = window.pref.get("window_height", 300)
