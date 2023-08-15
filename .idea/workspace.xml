@@ -5,7 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fd6e2bc7-35cb-4daa-9ba9-d9d52acdbdc5" name="Changes" comment="Fixed BaseException in rigctl interface when no workinng rigctl server">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/not1me.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/not1mm/__main__.py" beforeDir="false" afterPath="$PROJECT_DIR$/not1mm/__main__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/not1mm/bandmap.py" beforeDir="false" afterPath="$PROJECT_DIR$/not1mm/bandmap.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/not1mm/checkwindow.py" beforeDir="false" afterPath="$PROJECT_DIR$/not1mm/checkwindow.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/not1mm/lib/cat_interface.py" beforeDir="false" afterPath="$PROJECT_DIR$/not1mm/lib/cat_interface.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/not1mm/logwindow.py" beforeDir="false" afterPath="$PROJECT_DIR$/not1mm/logwindow.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/not1mm/vfo.py" beforeDir="false" afterPath="$PROJECT_DIR$/not1mm/vfo.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,7 +48,7 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="4803d9a2-cc6e-49a8-a99a-ab9c74ad17c4" name="Changes" comment="" />
+      <changelist id="fd6e2bc7-35cb-4daa-9ba9-d9d52acdbdc5" name="Changes" comment="Fixed BaseException in rigctl interface when no workinng rigctl server" />
       <created>1691994884746</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />

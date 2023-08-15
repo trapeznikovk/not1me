@@ -22,8 +22,8 @@ import sqlite3
 from PyQt5 import QtCore, QtGui
 from PyQt5 import QtNetwork
 from PyQt5 import QtWidgets, uic
-from qt_material import apply_stylesheet
-from qt_material import list_themes
+import qdarktheme
+
 
 
 os.environ["QT_QPA_PLATFORMTHEME"] = "gnome"
@@ -788,8 +788,9 @@ else:
     logger.setLevel(logging.WARNING)
     logger.warning("debugging off")
 
+qdarktheme.enable_hi_dpi()
 app = QtWidgets.QApplication(sys.argv)
-apply_stylesheet(app, theme='dark_blue.xml')
+qdarktheme.setup_theme()
 
 
 # app.setStyle("Adwaita-Dark")

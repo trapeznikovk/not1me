@@ -22,6 +22,7 @@ import serial
 from PyQt5 import QtCore, QtNetwork, uic, QtWidgets
 from PyQt5.QtCore import QTimer
 from PyQt5.QtWidgets import QApplication, QMainWindow
+import qdarktheme
 
 from not1mm.lib.cat_interface import CAT
 

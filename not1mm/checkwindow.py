@@ -19,9 +19,7 @@ from PyQt5.QtCore import QDir, Qt
 from PyQt5.QtWidgets import QApplication, QListWidget, QListWidgetItem, QMainWindow
 from PyQt5 import QtNetwork
 from PyQt5.QtGui import QFontDatabase
-from qt_material import apply_stylesheet
-from qt_material import list_themes
-
+import qdarktheme
 
 from not1mm.lib.database import DataBase
 from not1mm.lib.multicast import Multicast
@@ -214,9 +212,10 @@ else:
     logger.setLevel(logging.WARNING)
     logger.warning("debugging off")
 
+qdarktheme.enable_hi_dpi()
 app = QApplication(sys.argv)
-apply_stylesheet(app, theme='dark_blue.xml')
-# app.setStyle("Adwaita-Dark")
+qdarktheme.setup_theme()
+
 font_path = WORKING_PATH + "/data"
 _families = load_fonts_from_dir(os.fspath(font_path))
 window = MainWindow()

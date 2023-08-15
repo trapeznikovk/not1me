@@ -31,8 +31,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets, uic
 from PyQt5.QtCore import QDir, QPoint, QRect, QSize, Qt
 from PyQt5.QtGui import QFontDatabase
 from PyQt5.QtWidgets import QFileDialog
-from qt_material import apply_stylesheet
-from qt_material import list_themes
+import qdarktheme
 
 from not1mm.lib.about import About
 from not1mm.lib.cat_interface import CAT
@@ -2367,18 +2366,16 @@ if Path("./debug").exists():
 else:
     logger.setLevel(logging.WARNING)
     logger.warning("debugging off")
-
+qdarktheme.enable_hi_dpi()
 app = QtWidgets.QApplication(sys.argv)
+qdarktheme.setup_theme()
 # app.setStyle("Adwaita-Dark")
 
 font_path = WORKING_PATH + "/data"
 families = load_fonts_from_dir(os.fspath(font_path))
 logger.info(families)
 
-extra = {
-     'font_family': 'JetBrains Mono',
-}
-apply_stylesheet(app, theme='dark_blue.xml',invert_secondary=True, extra=extra)
+
 
 window = MainWindow()
 height = window.pref.get("window_height", 300)
